@@ -1,5 +1,5 @@
 {
-  "name": "leightondarkins/react-library",
+  "name": "leightondarkins-react-library",
   "version": "0.1.0",
   "description": "A React component library",
   "main": "dist/index.js",
