@@ -22,7 +22,7 @@ describe("StatefulCheckBox", () => {
       <StatefulCheckBox label={testProps.label} onChange={onChangeMock} />
     );
 
-    const htmlCheckBox = getByLabelText(testProps.label.toUpperCase());
+    const htmlCheckBox = getByLabelText(testProps.label, {exact: false});
     Simulate.change(htmlCheckBox);
 
     expect(htmlCheckBox.checked).toBeFalsy();

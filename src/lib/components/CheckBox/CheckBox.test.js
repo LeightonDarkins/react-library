@@ -12,7 +12,9 @@ describe("CheckBox", () => {
       <CheckBox label={testProps.label} onChange={() => {}} checked />
     );
 
-    expect(container.firstChild.textContent).toEqual(testProps.label.toUpperCase())
+    expect(container.firstChild.textContent).toEqual(
+      testProps.label.toUpperCase()
+    );
   });
 
   it("renders a checked CheckBox", () => {
@@ -20,7 +22,7 @@ describe("CheckBox", () => {
       <CheckBox label={testProps.label} onChange={() => {}} checked />
     );
 
-    const htmlCheckbox = getByLabelText(testProps.label.toUpperCase());
+    const htmlCheckbox = getByLabelText(testProps.label, { exact: false });
 
     expect(htmlCheckbox.checked).toBeTruthy();
   });
@@ -30,7 +32,7 @@ describe("CheckBox", () => {
       <CheckBox label={testProps.label} onChange={() => {}} checked={false} />
     );
 
-    const htmlCheckbox = getByLabelText(testProps.label.toUpperCase());
+    const htmlCheckbox = getByLabelText(testProps.label, { exact: false });
 
     expect(htmlCheckbox.checked).toBeFalsy();
   });
@@ -42,7 +44,7 @@ describe("CheckBox", () => {
       <CheckBox label={testProps.label} onChange={onChangeMock} checked />
     );
 
-    Simulate.change(getByLabelText(testProps.label.toUpperCase()));
+    Simulate.change(getByLabelText(testProps.label, { exact: false }));
 
     expect(onChangeMock).toHaveBeenCalled();
   });
