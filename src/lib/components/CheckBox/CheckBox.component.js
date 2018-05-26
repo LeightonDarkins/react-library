@@ -15,10 +15,14 @@ function CheckBox(props) {
   );
 }
 
+CheckBox.defaultProps = {
+  checked: false
+}
+
 CheckBox.propTypes = {
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  checked: PropTypes.bool.isRequired
+  checked: PropTypes.bool
 }
 
 export default CheckBox;

@@ -28,7 +28,7 @@ const App = props => {
         <CheckBox label="stateless checkbox (enabled)" onChange={statelessCallback} checked />
       </Wrapper>
       <Wrapper>
-        <CheckBox label="stateless checkbox (disabled)" onChange={statelessCallback} checked={false} />
+        <CheckBox label="stateless checkbox (disabled)" onChange={statelessCallback} />
       </Wrapper>
     </React.Fragment>
   );
