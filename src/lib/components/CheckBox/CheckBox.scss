@@ -1,0 +1,64 @@
+$checkbox-height: 27px;
+
+.CheckBox {
+  &:hover {
+    input ~ .checkmark {
+      background-color: #ccc;    
+    }
+  }
+
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: $checkbox-height;
+  user-select: none;
+
+  input {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ .checkmark {
+      background-color: #2196F3;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $checkbox-height;
+    width: $checkbox-height;
+    background-color: #eee;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+
+      left: 9px;
+      top: 4px;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  } 
+}
+
+.CheckBox--red {
+  @extend .CheckBox;
+
+  input {
+    &:checked ~ .checkmark {
+      background-color: red;
+    }
+  }
+}

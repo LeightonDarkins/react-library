@@ -7,7 +7,10 @@
     "dist": "babel src/lib -d dist --copy-files",
     "dist:watch": "babel src/lib -w -d dist --copy-files",
     "demo": "webpack-dev-server --mode development",
-    "demo:prod": "webpack --mode production"
+    "demo:watch": "npm-run-all --parallel dist:watch demo",
+    "demo:prod": "webpack --mode production",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -21,7 +24,8 @@
   "homepage": "https://github.com/LeightonDarkins/library#readme",
   "dependencies": {
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "style-loader": "^0.21.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -29,9 +33,16 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.2.0",
-    "jest": "^22.4.3",
+    "jest": "^22.4.4",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.3",
+    "postcss-loader": "^2.1.5",
     "prettier": "^1.12.1",
+    "react-testing-library": "^3.1.3",
+    "sass-loader": "^7.0.1",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3",
     "webpack-dev-server": "^3.1.4"

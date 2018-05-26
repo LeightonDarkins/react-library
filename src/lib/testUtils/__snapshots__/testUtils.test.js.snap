@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testUtils classListAsArray returns the correct array for a given element 1`] = `
+Array [
+  "test-class-1",
+  "test-class-2",
+  "another-class",
+]
+`;

@@ -1,10 +1,14 @@
 import React from "react";
 
-class CheckBox extends React.Component {
+import "./StatefulCheckBox.scss";
+
+class StatefulCheckBox extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = { checked: true };
+
+    this.checked = this.checked.bind(this);
   }
 
   checked() {
@@ -20,16 +24,17 @@ class CheckBox extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <label className="CheckBox">
+        {this.props.label.toUpperCase()}
         <input
           type="checkbox"
           checked={this.state.checked}
-          onChange={() => this.checked()}
+          onChange={this.checked}
         />
-        <label>{this.props.label}</label>
-      </React.Fragment>
+        <span className="checkmark" />
+      </label>
     );
   }
 }
 
-export default CheckBox;
+export default StatefulCheckBox;
