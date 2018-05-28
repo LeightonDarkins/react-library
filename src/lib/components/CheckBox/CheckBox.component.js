@@ -6,6 +6,7 @@ function CheckBox(props) {
     <label className="CheckBox">
       {props.label.toUpperCase()}
       <input
+        id={props.id}
         type="checkbox"
         checked={props.checked}
         onChange={props.onChange}

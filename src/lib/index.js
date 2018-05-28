@@ -7,16 +7,16 @@ export const StatefulCheckBox = StatefulCheckBoxComponent
 import CheckBoxComponent from './components/CheckBox/CheckBox.component'
 export const CheckBox = CheckBoxComponent
 
+import CheckBoxContainerComponent from './components/CheckBoxContainer/CheckBoxContainer.component'
+export const CheckBoxContainer = CheckBoxContainerComponent
+
 import WrapperComponent from './components/Wrapper/Wrapper.component'
 export const Wrapper = WrapperComponent
-
-import GDPRFormComponent from './components/GDPRForm/GDPRForm.component'
-export const GDPRForm = GDPRFormComponent
 
 export default {
   Title: TitleComponent,
   StatefulCheckBox: StatefulCheckBoxComponent,
   Wrapper: WrapperComponent,
-  GDPRForm: GDPRFormComponent,
-  CheckBox: CheckBox
+  CheckBox: CheckBoxComponent,
+  CheckBoxContainer: CheckBoxContainerComponent
 }
