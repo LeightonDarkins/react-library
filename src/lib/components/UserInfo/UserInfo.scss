@@ -1,0 +1,19 @@
+.UserInfo {
+  background-color: aquamarine;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+
+  h1 {
+    margin: 0;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+  }
+
+  h2 {
+    margin-top: 15px;
+    margin: 0;
+    text-transform: capitalize;
+    text-decoration: underline;
+  }
+}

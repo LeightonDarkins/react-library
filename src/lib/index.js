@@ -25,6 +25,9 @@ export const LeftTextInput = LeftTextInputComponent;
 import LoginFormComponent from "./components/LoginForm/LoginForm.component";
 export const LoginForm = LoginFormComponent;
 
+import UserInfoComponent from "./components/UserInfo/UserInfo.component";
+export const UserInfo = UserInfoComponent;
+
 export default {
   Title: TitleComponent,
   StatefulCheckBox: StatefulCheckBoxComponent,
@@ -34,5 +37,6 @@ export default {
   TextInput: TextInputComponent,
   TopTextInput: TopTextInputComponent,
   LeftTextInput: LeftTextInputComponent,
-  LoginForm: LoginFormComponent
+  LoginForm: LoginFormComponent,
+  UserInfo: UserInfoComponent
 };

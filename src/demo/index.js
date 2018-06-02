@@ -9,7 +9,8 @@ import {
   CheckBoxContainer,
   TopTextInput,
   LeftTextInput,
-  LoginForm
+  LoginForm,
+  UserInfo
 } from "../../dist";
 
 const App = props => {
@@ -65,6 +66,13 @@ const App = props => {
       </Wrapper>
       <Wrapper>
         <LoginForm />
+      </Wrapper>
+      <Wrapper>
+        <UserInfo
+          name="leighton darkins"
+          jobTitle="software developer"
+          imageSrc="https://assets-cdn.github.com/images/icons/emoji/unicode/1f920.png?v8"
+        />
       </Wrapper>
     </React.Fragment>
   );
