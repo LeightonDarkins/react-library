@@ -6,7 +6,7 @@ import "./LeftTextInput.scss";
 
 const REQUIRED_CHAR_COUNT = 15;
 
-const LeftTextInput = ({ id, label }) => {
+const LeftTextInput = ({ id, label, isPassword }) => {
   const validationMethod = value => {
     return value.length >= REQUIRED_CHAR_COUNT;
   };
@@ -41,7 +41,7 @@ const LeftTextInput = ({ id, label }) => {
           <input
             id={id}
             className="LeftTextInput__input"
-            type="text"
+            type={isPassword ? "password" : "text"}
             value={value}
             onChange={handleInputChange}
           />

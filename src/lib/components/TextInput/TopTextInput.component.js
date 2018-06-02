@@ -6,7 +6,7 @@ import "./TopTextInput.scss";
 
 const REQUIRED_CHAR_COUNT = 15;
 
-const TopTextInput = ({ id, label }) => {
+const TopTextInput = ({ id, label, isPassword }) => {
   const validationMethod = value => {
     return value.length >= REQUIRED_CHAR_COUNT;
   };
@@ -38,7 +38,7 @@ const TopTextInput = ({ id, label }) => {
         <input
           id={id}
           className="TopTextInput__input"
-          type="text"
+          type={isPassword ? "password" : "text"}
           value={value}
           onChange={handleInputChange}
           maxLength={99}
