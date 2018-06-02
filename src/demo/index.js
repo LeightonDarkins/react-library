@@ -6,7 +6,9 @@ import {
   StatefulCheckBox,
   CheckBox,
   Wrapper,
-  CheckBoxContainer
+  CheckBoxContainer,
+  TopTextInput,
+  LeftTextInput
 } from "../../dist";
 
 const App = props => {
@@ -53,6 +55,12 @@ const App = props => {
           label="stateless checkbox (with container)"
           apiCall={apiCall}
         />
+      </Wrapper>
+      <Wrapper>
+        <TopTextInput id="test-input" label="TOP LABEL" />
+      </Wrapper>
+      <Wrapper>
+        <LeftTextInput id="left-input" label="LONG LEFT LABEL" />
       </Wrapper>
     </React.Fragment>
   );

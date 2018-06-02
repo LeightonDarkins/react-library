@@ -1,0 +1,63 @@
+.TopTextInput {
+  &__flex {
+    display: flex;
+    position: relative;
+  }
+
+  &__label {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+    margin-left: 3px;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    height: 30px;
+    font-size: 22px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    box-shadow: 1px 1px #eee;
+    padding-left: 3px;
+    padding-right: 40px;
+
+    &:focus {
+      border: 1px solid #aaa;
+    }
+  }
+
+  &__char-count {
+    height: 34px;
+    position: absolute;
+    right: 3px;
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    align-items: center;
+  }
+
+  &__validation {
+    height: 16px;
+    color: white;
+    font-size: 13px;
+    margin-top: 3px;
+    padding: 3px;
+    background-color: #de4b4b;
+    border-radius: 3px;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.2s linear 0.2s, opacity 0.2s linear,
+      height 0.2s linear;
+
+    &--hidden {
+      @extend .TopTextInput__validation;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      transition: visibility 0.2s linear 0.2s, opacity 0.2s linear,
+        height 0.2s linear;
+    }
+  }
+}
