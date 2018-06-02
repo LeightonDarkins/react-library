@@ -8,7 +8,8 @@ import {
   Wrapper,
   CheckBoxContainer,
   TopTextInput,
-  LeftTextInput
+  LeftTextInput,
+  LoginForm
 } from "../../dist";
 
 const App = props => {
@@ -61,6 +62,9 @@ const App = props => {
       </Wrapper>
       <Wrapper>
         <LeftTextInput id="left-input" label="LONG LEFT LABEL" />
+      </Wrapper>
+      <Wrapper>
+        <LoginForm />
       </Wrapper>
     </React.Fragment>
   );
